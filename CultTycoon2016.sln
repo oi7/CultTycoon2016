@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 
 Project("{2D34ECA9-76BD-2449-24FF-C87645B47912}") = "CultTycoon2016", "Assembly-CSharp-firstpass.csproj", "{265F80E7-71D3-EF3E-513A-63C1782F3CA8}"
 EndProject
-Project("{2D34ECA9-76BD-2449-24FF-C87645B47912}") = "CultTycoon2016", "Assembly-CSharp.csproj", "{108A1CE2-0359-20FD-52FD-B22021D32DB3}"
-EndProject
 Project("{2D34ECA9-76BD-2449-24FF-C87645B47912}") = "CultTycoon2016", "Assembly-CSharp-Editor.csproj", "{ACE221C7-A010-83C2-CF08-A0B1900C1E69}"
 EndProject
 Global
@@ -17,10 +15,6 @@ Global
 		{265F80E7-71D3-EF3E-513A-63C1782F3CA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{265F80E7-71D3-EF3E-513A-63C1782F3CA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{265F80E7-71D3-EF3E-513A-63C1782F3CA8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{108A1CE2-0359-20FD-52FD-B22021D32DB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{108A1CE2-0359-20FD-52FD-B22021D32DB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{108A1CE2-0359-20FD-52FD-B22021D32DB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{108A1CE2-0359-20FD-52FD-B22021D32DB3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{ACE221C7-A010-83C2-CF08-A0B1900C1E69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ACE221C7-A010-83C2-CF08-A0B1900C1E69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACE221C7-A010-83C2-CF08-A0B1900C1E69}.Release|Any CPU.ActiveCfg = Release|Any CPU
