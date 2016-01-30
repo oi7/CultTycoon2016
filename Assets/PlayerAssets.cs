@@ -3,12 +3,11 @@ using System.Collections;
 
 public class PlayerAssets : MonoBehaviour {
 
-	public int money;
-	public int cult;
-	public int item;
-
 	public class Assets
 	{
+		public int money;
+		public int cult;
+		public int item;
 
 		public Assets(int mon, int cul, int ite)
 		{
@@ -25,27 +24,33 @@ public class PlayerAssets : MonoBehaviour {
 		}
 
 	}
+
+	Assets myAssets = new Assets();
+
 		
-	int Rally(int mon, int cul)
+	int Rally(int cul)
 	{
-		money += mon;
-		cult += cul;
+		myAssets.cult += cul;
+		return myAssets.cult;
 	}
 
 	int Purchase(int purchaseCost)
 	{
-		money -= purchaseCost;
-		item += 1;
+		myAssets.money -= purchaseCost;
+		return myAssets.money;
+
 	}
 
 	int Travel(int travelCost)
 	{
-		money -= travelCost;
+		myAssets.money -= travelCost;
+		return myAssets.money;
 	}
 
 	int Fundraise(int mon)
 	{
-		money += mon;
+		myAssets.money += mon;
+		return myAssets.money;
 	}
 
 	// Use this for initialization
@@ -54,8 +59,7 @@ public class PlayerAssets : MonoBehaviour {
 	}
 
 	void Start () {
-		Assets myAssets = new Assets();
-
+		
 	}
 	
 	// Update is called once per frame

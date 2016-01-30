@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ActivateObject.cs" />
      <Compile Include="Assets\PlayerAssets.cs" />
      <None Include="Assets\Inventory\Credits + C#.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
