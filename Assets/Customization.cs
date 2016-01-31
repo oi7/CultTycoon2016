@@ -34,21 +34,6 @@ public class Customization : MonoBehaviour {
 			inputField.ActivateInputField();
 			inputField.Select();
 			switch (inputRound) {
-<<<<<<< HEAD
-			case 0:
-				cultName = inputField.text;
-				promptText.text = "What are your followers called?";
-				break;
-			case 1:
-				followerName = inputField.text;
-				promptText.text = "What is your cult's slogan?";
-				break;
-			default:
-				cultSlogan = inputField.text;
-				ss = new switchScene ("CultTycoon2016");
-				ss.switchs();
-				break;
-=======
 				case 0:
 					cultName = inputField.text;
 					promptText.text = "What are your followers called?";
@@ -68,7 +53,6 @@ public class Customization : MonoBehaviour {
 					ss = new switchScene ("CultTycoon2016");
 					ss.switchs();
 					break;
->>>>>>> d107032beffdb614e4c5be15e0c5f319818c4951
 			}
 			inputRound += 1;
 		}
