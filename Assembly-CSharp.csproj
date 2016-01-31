@@ -48,6 +48,7 @@
      <Compile Include="Assets\ActivateObject.cs" />
      <Compile Include="Assets\City.cs" />
      <Compile Include="Assets\DisplayAssets.cs" />
+     <Compile Include="Assets\DisplayFollower.cs" />
      <Compile Include="Assets\PlayerAssets.cs" />
      <Compile Include="Assets\RallyBehavior.cs" />
      <Compile Include="Assets\RallyButton.cs" />
