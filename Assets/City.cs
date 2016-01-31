@@ -41,6 +41,8 @@ public class City : MonoBehaviour {
 	public void Travel()
 	{
 		PlayerAssets.Instance.week++;
+		PlayerAssets.Instance.currCityName = cityName;
+		PlayerAssets.Instance.currCityDescription = citySentence;
 		Debug.Log (PlayerAssets.Instance.week);
 	}
 

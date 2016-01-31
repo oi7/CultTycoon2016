@@ -12,6 +12,9 @@ public class PlayerAssets : MonoBehaviour {
 	public string followerName;
 	public string cultSlogan;
 
+	public string currCityName;
+	public string currCityDescription;
+
 	public static PlayerAssets Instance = new PlayerAssets();
 
 
@@ -30,6 +33,8 @@ public class PlayerAssets : MonoBehaviour {
 		cultName = "Trump 2016";
 		followerName = "Trump supporters";
 		cultSlogan = "Make America great again";
+		currCityName = "Cambridge, MA";
+		currCityDescription = "Welcome to game jam central.";
 	}
 		
 	void Rally(int increasedFollower, int rallyCost)
