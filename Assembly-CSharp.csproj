@@ -51,6 +51,7 @@
      <Compile Include="Assets\DisplayAssets.cs" />
      <Compile Include="Assets\DisplayBackground.cs" />
      <Compile Include="Assets\DisplayFollower.cs" />
+     <Compile Include="Assets\DisplaySummary.cs" />
      <Compile Include="Assets\EndGame.cs" />
      <Compile Include="Assets\PlayerAssets.cs" />
      <Compile Include="Assets\RallyBehavior.cs" />
@@ -62,11 +63,11 @@
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
- <Reference Include="UnityEngine.Networking">
- <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
