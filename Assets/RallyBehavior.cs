@@ -173,10 +173,11 @@ public class RallyBehavior : MonoBehaviour {
 		rallyChoices = new List<RallyChoice>();
 
 		// TODO: get choices from CityInfo
-		AssignChoices("making America great again.", "comfortable flannel shirts.");
-		AssignChoices("to rename Maine to Canada 2.", "BUY MORE FLANNEL!");
-		AssignChoices("drink the sweet nectar of America.", "do so much winning!");
-		AssignChoices("spreading the gospel of patchworked button shirts?", "praying to the based god?");
+
+		AssignChoices(CityData.currentCityData.rallyChoice1, CityData.currentCityData.rallyChoice2);
+		AssignChoices(CityData.currentCityData.rallyChoice3, CityData.currentCityData.rallyChoice4);
+		AssignChoices(CityData.currentCityData.rallyChoice5, CityData.currentCityData.rallyChoice6);
+		AssignChoices(CityData.currentCityData.rallyChoice7, CityData.currentCityData.rallyChoice8);
 
 		promptBox = GetComponentsInChildren<Text>()[0];
 		textBox = GetComponentsInChildren<Text>()[1];
