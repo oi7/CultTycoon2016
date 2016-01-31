@@ -52,6 +52,7 @@
      <Compile Include="Assets\RallyBehavior.cs" />
      <Compile Include="Assets\RallyButton.cs" />
      <Compile Include="Assets\RallyChoice.cs" />
+     <Compile Include="Assets\switchScene.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
