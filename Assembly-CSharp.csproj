@@ -47,11 +47,14 @@
   <ItemGroup>
      <Compile Include="Assets\ActivateObject.cs" />
      <Compile Include="Assets\City.cs" />
+     <Compile Include="Assets\CityData.cs" />
+     <Compile Include="Assets\CityUI.cs" />
      <Compile Include="Assets\Customization.cs" />
      <Compile Include="Assets\DisplayAssets.cs" />
      <Compile Include="Assets\DisplayBackground.cs" />
      <Compile Include="Assets\DisplayFollower.cs" />
      <Compile Include="Assets\DisplaySummary.cs" />
+     <Compile Include="Assets\EmptyClass.cs" />
      <Compile Include="Assets\EndGame.cs" />
      <Compile Include="Assets\PlayerAssets.cs" />
      <Compile Include="Assets\RallyBehavior.cs" />

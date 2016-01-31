@@ -167,7 +167,8 @@ public class RallyBehavior : MonoBehaviour {
 		rallyChoices = new List<RallyChoice>();
 
 		// TODO: get choices from CityInfo
-		AssignChoices("making America great again.", "comfortable flannel shirts.");
+
+		AssignChoices(CityData.currentCityData.rallyChoice1, "comfortable flannel shirts.");
 		AssignChoices("to rename Maine to Canada 2.", "BUY MORE FLANNEL!");
 		AssignChoices("drink the sweet nectar of America.", "do so much winning!");
 		AssignChoices("spreading the gospel of patchworked button shirts?", "praying to the based god?");

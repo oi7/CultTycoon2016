@@ -36,6 +36,14 @@ public class City : MonoBehaviour {
 		txtDescription.text = citySentence;
 		gameObject.SetActive (true);
 		currentCityCategory = cityCategory;
+		CityData.currentCityData.rallyChoice1 = rallyChoice1;
+		CityData.currentCityData.rallyChoice2 = rallyChoice2;
+		CityData.currentCityData.rallyChoice3 = rallyChoice3;
+		CityData.currentCityData.rallyChoice4 = rallyChoice4;
+		CityData.currentCityData.rallyChoice5 = rallyChoice5;
+		CityData.currentCityData.rallyChoice6 = rallyChoice6;
+		CityData.currentCityData.rallyChoice7 = rallyChoice7;
+		CityData.currentCityData.rallyChoice8 = rallyChoice8;
 	}
 
 	public void Travel()
