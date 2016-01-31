@@ -149,7 +149,11 @@ public class RallyBehavior : MonoBehaviour {
 				promptBox.text = successText;
 			}
 			yield return new WaitForSeconds(5);
-			SceneManager.LoadScene("CultTycoon2016");
+				if (PlayerAssets.Instance.week >= 10) {
+					SceneManager.LoadScene ("EndGame");
+				} else {
+					SceneManager.LoadScene ("CultTycoon2016");
+				}
 		}
 	}
 
