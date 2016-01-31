@@ -18,7 +18,12 @@ public class City : MonoBehaviour {
 		txtName.text = cityName;
 		txtDescription.text = citySentence;
 		gameObject.SetActive (true);
-//		Debug.Log ("hello");
+	}
+
+	public void Travel()
+	{
+		PlayerAssets.Instance.week++;
+		Debug.Log (PlayerAssets.Instance.week);
 	}
 
 //	string[] names = {
