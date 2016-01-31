@@ -3,7 +3,29 @@ using System.Collections;
 
 public class RallyButton : MonoBehaviour {
 
-	public RallyChoice choice;
+	public bool active = true;
+	public int score = 0;
+	public GameObject myObject;
+	public RallyBehavior rallyBehavior;
+	public AudioSource buttonClick;
+
+	public void ClickHandler () {
+		if (active) {
+			buttonClick.Play();
+			active = false;
+			rallyBehavior.AddPoints(score);
+		}
+	}
+
+	public void Activate () {
+		active = true;
+		myObject.SetActive(true);
+	}
+
+	public void Deactivate () {
+		active = false;
+		myObject.SetActive(false);
+	}
 
 	// Use this for initialization
 	void Start () {
