@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -32,6 +33,7 @@ public class RallyBehavior : MonoBehaviour {
 	public string failText = "Fail";
 	public string successText = "Success";
 	public string critText = "Critical";
+	public int followersGained = 0;
 
 	private List<string> rallyPrompts = new List<string> (new string[] {
 		"Welcome " + PlayerAssets.Instance.followerName + ", my children!",
@@ -65,7 +67,7 @@ public class RallyBehavior : MonoBehaviour {
 		*/
 
 		// "correct answer" version - choice A is always correct
-		if (Random.value < .5) {
+		if (UnityEngine.Random.value < .5) {
 			rallyChoices.Add (new RallyChoice (choiceA, pointMax));
 			rallyChoices.Add (new RallyChoice (choiceB, pointMin));
 		} else {
@@ -135,25 +137,29 @@ public class RallyBehavior : MonoBehaviour {
 			button2.Activate();
 		} else {
 			Debug.Log("score: " + score);
-			yield return new WaitForSeconds (1);
+			yield return new WaitForSeconds (5);
 			bgMusic.Stop();
 			if (score < 2) {
-				crowdBoo.Play ();
-				promptBox.text = failText;
+				crowdBoo.Play();
+				followersGained = UnityEngine.Random.Range (0, 11) * 50; // 0-500, 50 point intervals
+				promptBox.text = failText + "!" + Environment.NewLine + "Still, " + followersGained + " new " + PlayerAssets.Instance.followerName + " have joined your cause.";
 			} else if (score > 6) {
 				crowdCheer.Play ();
-				promptBox.text = critText;
+				followersGained = 2000 + UnityEngine.Random.Range (0, 11) * 200; // 2000-4000, 200 point intervals
+				promptBox.text = critText + "!" + Environment.NewLine + followersGained + " new " + PlayerAssets.Instance.followerName + " have joined your cause.";
 			} else {
 				// crowdNeutral.Play();
 				crowdCheer.Play ();
-				promptBox.text = successText;
+				followersGained = 500 + UnityEngine.Random.Range (0, 11) * 100; // 500-1500, 100 point intervals
+				promptBox.text = successText + "!" + Environment.NewLine + followersGained + " new " + PlayerAssets.Instance.followerName + " have joined your cause.";
 			}
 			yield return new WaitForSeconds(5);
-				if (PlayerAssets.Instance.week >= 10) {
-					SceneManager.LoadScene ("EndGame");
-				} else {
-					SceneManager.LoadScene ("CultTycoon2016");
-				}
+			PlayerAssets.Instance.follower += followersGained;
+			if (PlayerAssets.Instance.week >= 10) {
+				SceneManager.LoadScene ("EndGame");
+			} else {
+				SceneManager.LoadScene ("CultTycoon2016");
+			}
 		}
 	}
 
@@ -168,10 +174,10 @@ public class RallyBehavior : MonoBehaviour {
 
 		// TODO: get choices from CityInfo
 
-		AssignChoices(CityData.currentCityData.rallyChoice1, "comfortable flannel shirts.");
-		AssignChoices("to rename Maine to Canada 2.", "BUY MORE FLANNEL!");
-		AssignChoices("drink the sweet nectar of America.", "do so much winning!");
-		AssignChoices("spreading the gospel of patchworked button shirts?", "praying to the based god?");
+		AssignChoices(CityData.currentCityData.rallyChoice1, CityData.currentCityData.rallyChoice2);
+		AssignChoices(CityData.currentCityData.rallyChoice3, CityData.currentCityData.rallyChoice4);
+		AssignChoices(CityData.currentCityData.rallyChoice5, CityData.currentCityData.rallyChoice6);
+		AssignChoices(CityData.currentCityData.rallyChoice7, CityData.currentCityData.rallyChoice8);
 
 		promptBox = GetComponentsInChildren<Text>()[0];
 		textBox = GetComponentsInChildren<Text>()[1];

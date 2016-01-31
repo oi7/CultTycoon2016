@@ -1,16 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PlayerAssets.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/City.cs">
     <Files>
-      <File FileName="Assets/RallyBehavior.cs" Line="1" Column="1" />
-      <File FileName="Assets/PlayerAssets.cs" Line="5" Column="42" />
-      <File FileName="Assets/DisplayAssets.cs" Line="5" Column="43" />
-      <File FileName="Assets/City.cs" Line="14" Column="27" />
-      <File FileName="Assets/switchScene.cs" Line="1" Column="1" />
-      <File FileName="Assets/ActivateObject.cs" Line="1" Column="1" />
       <File FileName="Assets/DisplayFollower.cs" Line="1" Column="1" />
-      <File FileName="Assets/Customization.cs" Line="34" Column="11" />
-      <File FileName="Assets/RallyButton.cs" Line="1" Column="1" />
+      <File FileName="Assets/DisplayBackground.cs" Line="15" Column="3" />
+      <File FileName="Assets/switchScene.cs" Line="13" Column="1" />
+      <File FileName="Assets/EndGame.cs" Line="13" Column="4" />
+      <File FileName="Assets/RallyBehavior.cs" Line="171" Column="54" />
+      <File FileName="Assets/DisplaySummary.cs" Line="25" Column="14" />
+      <File FileName="Assets/City.cs" Line="39" Column="39" />
+      <File FileName="Assets/CityData.cs" Line="26" Column="58" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
