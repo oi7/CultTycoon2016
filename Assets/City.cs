@@ -28,12 +28,14 @@ public class City : MonoBehaviour {
 	[Header("Child Controls")]
 	public Text txtName;
 	public Text txtDescription;
+	public static int currentCityCategory = 0;
 
 	public void ShowPopUp()
 	{
 		txtName.text = cityName;
 		txtDescription.text = citySentence;
 		gameObject.SetActive (true);
+		currentCityCategory = cityCategory;
 	}
 
 	public void Travel()
@@ -70,7 +72,6 @@ public class City : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
 
 	}
 	
