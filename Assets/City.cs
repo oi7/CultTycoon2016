@@ -11,6 +11,7 @@ public class City : MonoBehaviour {
 
 	[Header("Data not displaying")]
 	public string cityRegion;
+	public string citySuccess;
 	public string rallyChoice1;
 	public string rallyChoice2;
 	public string rallyChoice3;
