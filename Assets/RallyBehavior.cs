@@ -22,6 +22,12 @@ public class RallyBehavior : MonoBehaviour {
 
 	public AudioSource dialogClick;
 
+	public AudioSource speechVoice1;
+	public AudioSource speechVoice2;
+	public AudioSource speechVoice3;
+	public AudioSource speechVoice4;
+	public AudioSource speechVoice5;
+
 	private List<string> rallyPrompts = new List<string> (new string[] {
 		"Welcome " + PlayerAssets.Instance.followerName + ", my children!",
 		"I know your spiritual happiness depends on...",
@@ -82,7 +88,7 @@ public class RallyBehavior : MonoBehaviour {
 
 	// Play reaction sounds
 	IEnumerator PlayReaction(int points) {
-		yield return new WaitForSeconds (.5f);
+		yield return new WaitForSeconds (2);
 		if (points == 0)
 			badReaction.Play ();
 		else
@@ -91,12 +97,26 @@ public class RallyBehavior : MonoBehaviour {
 
 	// Update labels after each round
 	IEnumerator UpdateLabels() {
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(4);
 
 		button.Deactivate();
 		button2.Deactivate();
 
 		dialogClick.Play();
+		switch (round) {
+			case 2:
+				speechVoice3.Play();
+				break;
+			case 3:
+				speechVoice4.Play();
+				break;
+			case 4:
+				speechVoice5.Play();
+				break;
+			default:
+				speechVoice1.Play();
+				break;
+		}
 		promptBox.text = rallyPrompts[round];
 
 		if (round < 5) {
@@ -148,6 +168,7 @@ public class RallyBehavior : MonoBehaviour {
 		button2.Deactivate();
 
 		dialogClick.Play();
+		speechVoice1.Play();
 		promptBox.text = rallyPrompts[0];
 
 		StartCoroutine(AdvancePrompt());
@@ -158,6 +179,7 @@ public class RallyBehavior : MonoBehaviour {
 		yield return new WaitForSeconds(4);
 
 		dialogClick.Play();
+		speechVoice2.Play();
 		promptBox.text = rallyPrompts[1];
 
 		textBox.text = rallyChoices[0].text;
