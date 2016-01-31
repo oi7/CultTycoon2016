@@ -5,9 +5,20 @@ using UnityEngine.UI;
 
 public class City : MonoBehaviour {
 
-	[Header("Data")]
+	[Header("Data displaying")]
 	public string cityName;
 	public string citySentence;
+
+	[Header("Data not displaying")]
+	public string cityRegion;
+	public string rallyChoice1;
+	public string rallyChoice2;
+	public string rallyChoice3;
+	public string rallyChoice4;
+	public string rallyChoice5;
+	public string rallyChoice6;
+	public string rallyChoice7;
+	public string rallyChoice8;
 
 	[Header("Child Controls")]
 	public Text txtName;
