@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -27,6 +28,10 @@ public class RallyBehavior : MonoBehaviour {
 	public AudioSource speechVoice3;
 	public AudioSource speechVoice4;
 	public AudioSource speechVoice5;
+
+	public string failText = "Fail";
+	public string successText = "Success";
+	public string critText = "Critical";
 
 	private List<string> rallyPrompts = new List<string> (new string[] {
 		"Welcome " + PlayerAssets.Instance.followerName + ", my children!",
@@ -132,13 +137,19 @@ public class RallyBehavior : MonoBehaviour {
 			Debug.Log("score: " + score);
 			yield return new WaitForSeconds (1);
 			bgMusic.Stop();
-			if (score < 2)
-				crowdBoo.Play();
-			// else if (score > 6)
-				// crowdCheer.Play();
-			else
+			if (score < 2) {
+				crowdBoo.Play ();
+				promptBox.text = failText;
+			} else if (score > 6) {
+				crowdCheer.Play ();
+				promptBox.text = critText;
+			} else {
 				// crowdNeutral.Play();
-				crowdCheer.Play();
+				crowdCheer.Play ();
+				promptBox.text = successText;
+			}
+			yield return new WaitForSeconds(5);
+			SceneManager.LoadScene("CultTycoon2016");
 		}
 	}
 

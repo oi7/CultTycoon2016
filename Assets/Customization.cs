@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,7 +17,6 @@ public class Customization : MonoBehaviour {
 	public InputField inputField;
 
 	public AudioSource dialogClick;
-	public switchScene ss;
 
 	// Save customizations to PlayerAssets
 	void SaveCustomizations() {
@@ -53,8 +53,7 @@ public class Customization : MonoBehaviour {
 					cultSlogan = inputField.text;
 					inputField.text = "";
 					SaveCustomizations();
-					ss = new switchScene ("CultTycoon2016");
-					ss.switchs();
+					SceneManager.LoadScene("CultTycoon2016");
 					break;
 			}
 			inputRound += 1;
