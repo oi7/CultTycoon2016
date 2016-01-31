@@ -15,16 +15,22 @@ public class Customization : MonoBehaviour {
 	public Text promptText;
 	public InputField inputField;
 
+	public AudioSource dialogClick;
 	public switchScene ss;
 
 	// Use this for initialization
 	void Start () {
+		dialogClick.Play();
 		EventSystem.current.SetSelectedGameObject(inputField.gameObject, null);
 	}
 
 	// Update is called once per frame
 	void Update () {
 		if(inputField.text != "" && Input.GetKey(KeyCode.Return)) {
+			dialogClick.Play();
+			inputField.text = "";
+			inputField.ActivateInputField();
+			inputField.Select();
 			switch (inputRound) {
 				case 0:
 					cultName = inputField.text;
@@ -36,12 +42,16 @@ public class Customization : MonoBehaviour {
 					break;
 				default:
 					cultSlogan = inputField.text;
+					PlayerAssets.Instance.cultName = cultName;
+				Debug.Log (PlayerAssets.Instance.cultName);
+					PlayerAssets.Instance.followerName = followerName;
+				Debug.Log (PlayerAssets.Instance.followerName);
+					PlayerAssets.Instance.cultSlogan = cultSlogan;
+				Debug.Log (PlayerAssets.Instance.cultSlogan);
 					ss = new switchScene ("CultTycoon2016");
 					ss.switchs();
 					break;
 			}
-			inputField.text = "";
-			EventSystem.current.SetSelectedGameObject (inputField.gameObject, null);
 			inputRound += 1;
 		}
 	}

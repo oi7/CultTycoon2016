@@ -20,13 +20,15 @@ public class RallyBehavior : MonoBehaviour {
 	public AudioSource goodReaction;
 	public AudioSource badReaction;
 
-	public List<string> rallyPrompts = new List<string> (new string[] {
-		"Welcome [followers], my children!",
+	public AudioSource dialogClick;
+
+	private List<string> rallyPrompts = new List<string> (new string[] {
+		"Welcome " + PlayerAssets.Instance.followerName + ", my children!",
 		"I know your spiritual happiness depends on...",
 		"I have had a vision. The true way to salvation is...",
-		"Join [cult name], and together we will...",
+		"Join " + PlayerAssets.Instance.cultName + ", and together we will...",
 		"Will you keep living in ignorance, or join my flock in...",
-		"[slogan]!"
+		PlayerAssets.Instance.cultSlogan + "!"
 	});
 
 	public List<RallyChoice> rallyChoices;
@@ -94,6 +96,7 @@ public class RallyBehavior : MonoBehaviour {
 		button.Deactivate();
 		button2.Deactivate();
 
+		dialogClick.Play();
 		promptBox.text = rallyPrompts[round];
 
 		if (round < 5) {
@@ -144,6 +147,7 @@ public class RallyBehavior : MonoBehaviour {
 		button.Deactivate();
 		button2.Deactivate();
 
+		dialogClick.Play();
 		promptBox.text = rallyPrompts[0];
 
 		StartCoroutine(AdvancePrompt());
@@ -153,6 +157,7 @@ public class RallyBehavior : MonoBehaviour {
 	IEnumerator AdvancePrompt() {
 		yield return new WaitForSeconds(4);
 
+		dialogClick.Play();
 		promptBox.text = rallyPrompts[1];
 
 		textBox.text = rallyChoices[0].text;
