@@ -14,6 +14,7 @@ public class PlayerAssets : MonoBehaviour {
 
 	public static PlayerAssets Instance = new PlayerAssets();
 
+
 	public PlayerAssets(int mon, int fol, int wee)
 	{
 		money = mon;

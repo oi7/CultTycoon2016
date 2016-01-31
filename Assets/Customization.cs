@@ -18,6 +18,13 @@ public class Customization : MonoBehaviour {
 	public AudioSource dialogClick;
 	public switchScene ss;
 
+	// Save customizations to PlayerAssets
+	void SaveCustomizations() {
+		PlayerAssets.Instance.cultName = cultName;
+		PlayerAssets.Instance.followerName = followerName;
+		PlayerAssets.Instance.cultSlogan = cultSlogan;
+	}
+
 	// Use this for initialization
 	void Start () {
 		dialogClick.Play();
@@ -29,26 +36,23 @@ public class Customization : MonoBehaviour {
 
 		if(inputField.text != "" && Input.GetKey(KeyCode.Return)) {
 			dialogClick.Play();
-			inputField.text = "";
 			inputField.ActivateInputField();
 			inputField.Select();
 			switch (inputRound) {
 				case 0:
 					cultName = inputField.text;
+					inputField.text = "";
 					promptText.text = "What are your followers called?";
 					break;
 				case 1:
 					followerName = inputField.text;
+					inputField.text = "";
 					promptText.text = "What is your cult's slogan?";
 					break;
 				default:
 					cultSlogan = inputField.text;
-					PlayerAssets.Instance.cultName = cultName;
-				Debug.Log (PlayerAssets.Instance.cultName);
-					PlayerAssets.Instance.followerName = followerName;
-				Debug.Log (PlayerAssets.Instance.followerName);
-					PlayerAssets.Instance.cultSlogan = cultSlogan;
-				Debug.Log (PlayerAssets.Instance.cultSlogan);
+					inputField.text = "";
+					SaveCustomizations();
 					ss = new switchScene ("CultTycoon2016");
 					ss.switchs();
 					break;
