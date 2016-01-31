@@ -33,12 +33,15 @@ public class RallyBehavior : MonoBehaviour {
 	public Text promptBox;
 	public Text textBox;
 	public Text textBox2;
+	public int textSize;
 
 	public RallyButton button;
 	public RallyButton button2;
 
 	// Assign points to rally choices, append to list
 	void AssignChoices (string choiceA, string choiceB) {
+		// random version – correct answer is arbitrarily decided
+		/*
 		if (Random.value < .5) {
 			rallyChoices.Add (new RallyChoice (choiceA, pointMin));
 			rallyChoices.Add (new RallyChoice (choiceB, pointMax));
@@ -46,9 +49,9 @@ public class RallyBehavior : MonoBehaviour {
 			rallyChoices.Add (new RallyChoice (choiceA, pointMax));
 			rallyChoices.Add (new RallyChoice (choiceB, pointMin));
 		}
+		*/
 
 		// "correct answer" version - choice A is always correct
-		/*
 		if (Random.value < .5) {
 			rallyChoices.Add (new RallyChoice (choiceA, pointMax));
 			rallyChoices.Add (new RallyChoice (choiceB, pointMin));
@@ -56,7 +59,6 @@ public class RallyBehavior : MonoBehaviour {
 			rallyChoices.Add (new RallyChoice (choiceB, pointMin));
 			rallyChoices.Add (new RallyChoice (choiceA, pointMax));
 		}
-		*/
 	}
 
 	// Add points based on button press, state transition
@@ -136,13 +138,13 @@ public class RallyBehavior : MonoBehaviour {
 		textBox = GetComponentsInChildren<Text>()[1];
 		textBox2 = GetComponentsInChildren<Text>()[2];
 
-		promptBox.text = rallyPrompts[0];
-
 		button = GetComponentsInChildren<RallyButton>()[0];
 		button2 = GetComponentsInChildren<RallyButton>()[1];
 
 		button.Deactivate();
 		button2.Deactivate();
+
+		promptBox.text = rallyPrompts[0];
 
 		StartCoroutine(AdvancePrompt());
 	}
