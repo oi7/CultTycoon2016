@@ -46,6 +46,10 @@ public class City : MonoBehaviour {
 		CityData.currentCityData.rallyChoice7 = rallyChoice7;
 		CityData.currentCityData.rallyChoice8 = rallyChoice8;
 
+		CityData.currentCityData.rallySummary1 = rallySummary1;
+		CityData.currentCityData.rallySummary2 = rallySummary2;
+		CityData.currentCityData.rallySummary3 = rallySummary3;
+
 		PlayerAssets.Instance.currCityName = cityName;
 		PlayerAssets.Instance.currCityDescription = citySentence;
 

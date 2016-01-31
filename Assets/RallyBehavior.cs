@@ -142,16 +142,16 @@ public class RallyBehavior : MonoBehaviour {
 			if (score < 2) {
 				crowdBoo.Play();
 				followersGained = UnityEngine.Random.Range (0, 11) * 50; // 0-500, 50 point intervals
-				promptBox.text = failText + "!" + Environment.NewLine + "Still, " + followersGained + " new " + PlayerAssets.Instance.followerName + " have joined your cause.";
+				promptBox.text = failText + " Only " + followersGained + " new " + PlayerAssets.Instance.followerName + " have joined you.";
 			} else if (score > 6) {
 				crowdCheer.Play ();
 				followersGained = 2000 + UnityEngine.Random.Range (0, 11) * 200; // 2000-4000, 200 point intervals
-				promptBox.text = critText + "!" + Environment.NewLine + followersGained + " new " + PlayerAssets.Instance.followerName + " have joined your cause.";
+				promptBox.text = critText + " " + followersGained + " new " + PlayerAssets.Instance.followerName + " have joined you!";
 			} else {
 				// crowdNeutral.Play();
 				crowdCheer.Play ();
 				followersGained = 500 + UnityEngine.Random.Range (0, 11) * 100; // 500-1500, 100 point intervals
-				promptBox.text = successText + "!" + Environment.NewLine + followersGained + " new " + PlayerAssets.Instance.followerName + " have joined your cause.";
+				promptBox.text = successText + " " + followersGained + " new " + PlayerAssets.Instance.followerName + " have joined you!";
 			}
 			yield return new WaitForSeconds(5);
 			PlayerAssets.Instance.follower += followersGained;
@@ -172,7 +172,9 @@ public class RallyBehavior : MonoBehaviour {
 
 		rallyChoices = new List<RallyChoice>();
 
-		// TODO: get choices from CityInfo
+		failText = CityData.currentCityData.rallySummary1;
+		successText = CityData.currentCityData.rallySummary2;
+		critText = CityData.currentCityData.rallySummary3;
 
 		AssignChoices(CityData.currentCityData.rallyChoice1, CityData.currentCityData.rallyChoice2);
 		AssignChoices(CityData.currentCityData.rallyChoice3, CityData.currentCityData.rallyChoice4);
