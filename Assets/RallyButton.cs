@@ -8,10 +8,12 @@ public class RallyButton : MonoBehaviour {
 	public GameObject myObject;
 	public RallyBehavior rallyBehavior;
 	public AudioSource buttonClick;
+	public AudioSource speechVoice;
 
 	public void ClickHandler () {
 		if (active) {
 			buttonClick.Play();
+			speechVoice.Play();
 			active = false;
 			rallyBehavior.AddPoints(score);
 		}
