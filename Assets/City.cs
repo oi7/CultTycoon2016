@@ -36,13 +36,13 @@ public class City : MonoBehaviour {
 		txtDescription.text = citySentence;
 		gameObject.SetActive (true);
 		currentCityCategory = cityCategory;
+		PlayerAssets.Instance.currCityName = cityName;
+		PlayerAssets.Instance.currCityDescription = citySentence;
 	}
 
 	public void Travel()
 	{
 		PlayerAssets.Instance.week++;
-		PlayerAssets.Instance.currCityName = cityName;
-		PlayerAssets.Instance.currCityDescription = citySentence;
 		Debug.Log (PlayerAssets.Instance.week);
 	}
 
