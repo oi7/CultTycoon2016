@@ -51,7 +51,6 @@
      <Compile Include="Assets\CityUI.cs" />
      <Compile Include="Assets\Customization.cs" />
      <Compile Include="Assets\DisplayAssets.cs" />
-     <Compile Include="Assets\DisplayBackground.cs" />
      <Compile Include="Assets\DisplayFollower.cs" />
      <Compile Include="Assets\DisplaySummary.cs" />
      <Compile Include="Assets\EmptyClass.cs" />
