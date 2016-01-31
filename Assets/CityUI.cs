@@ -10,6 +10,10 @@ public class CityUI : MonoBehaviour {
 	public Text orLabel;
 	public Button rallyButton;
 
+	public AudioSource musicRural;
+	public AudioSource musicSuburban;
+	public AudioSource musicUrban;
+
 	// Advance prompt after description
 	IEnumerator AdvancePrompt() {
 		yield return new WaitForSeconds(4);
@@ -22,6 +26,13 @@ public class CityUI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if (City.currentCityCategory == 0)
+			musicRural.Play ();
+		else if (City.currentCityCategory == 1)
+			musicSuburban.Play ();
+		else
+			musicUrban.Play ();
+			
 		txtName.text = PlayerAssets.Instance.currCityName;
 		txtDescription.text = PlayerAssets.Instance.currCityDescription;
 		StartCoroutine(AdvancePrompt());
