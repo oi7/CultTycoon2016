@@ -22,7 +22,6 @@ public class Customization : MonoBehaviour {
 	void Start () {
 		dialogClick.Play();
 		EventSystem.current.SetSelectedGameObject(inputField.gameObject, null);
-
 	}
 
 	// Update is called once per frame
