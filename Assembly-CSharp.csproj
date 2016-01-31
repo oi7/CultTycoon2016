@@ -46,8 +46,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\ActivateObject.cs" />
+     <Compile Include="Assets\City.cs" />
+     <Compile Include="Assets\DisplayAssets.cs" />
      <Compile Include="Assets\PlayerAssets.cs" />
-     <None Include="Assets\Inventory\Credits + C#.txt" />
+     <Compile Include="Assets\RallyBehavior.cs" />
+     <Compile Include="Assets\RallyButton.cs" />
+     <Compile Include="Assets\RallyChoice.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />

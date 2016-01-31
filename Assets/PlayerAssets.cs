@@ -1,69 +1,49 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
-public class PlayerAssets : MonoBehaviour {
+public class PlayerAssets {
 
-	public class Assets
+	public int money;
+	public int follower;
+	public int week;
+
+	public static PlayerAssets Instance = new PlayerAssets();
+
+	public PlayerAssets(int mon, int fol, int wee)
 	{
-		public int money;
-		public int cult;
-		public int item;
+		money = mon;
+		follower = fol;
+		week = wee;
+	}	
 
-		public Assets(int mon, int cul, int ite)
-		{
-			money = mon;
-			cult = cul;
-			item = ite;
-		}	
-
-		public Assets()
-		{
-			money = 0;
-			cult = 0;
-			item = 0;
-		}
-
+	public PlayerAssets()
+	{
+		money = 0;
+		follower = 0;
+		week = 0;
 	}
-
-	Assets myAssets = new Assets();
 
 		
-	int Rally(int cul)
+	void Rally(int increasedFollower, int rallyCost)
 	{
-		myAssets.cult += cul;
-		return myAssets.cult;
+		follower += increasedFollower;
+		money -= rallyCost;
 	}
 
-	int Purchase(int purchaseCost)
+	void Purchase(int purchaseCost)
 	{
-		myAssets.money -= purchaseCost;
-		return myAssets.money;
+		money -= purchaseCost;
 
 	}
 
-	int Travel(int travelCost)
+	void Travel(int travelCost)
 	{
-		myAssets.money -= travelCost;
-		return myAssets.money;
+		money -= travelCost;
 	}
 
-	int Fundraise(int mon)
+	void Fundraise(int increasedMoney)
 	{
-		myAssets.money += mon;
-		return myAssets.money;
-	}
-
-	// Use this for initialization
-	void Awake () {
-		
-	}
-
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		money += increasedMoney;
 	}
 }
