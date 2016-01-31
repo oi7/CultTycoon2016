@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class PlayerAssets {
+public class PlayerAssets : MonoBehaviour {
 
 	public int money;
 	public int follower;

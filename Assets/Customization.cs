@@ -20,25 +20,27 @@ public class Customization : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		EventSystem.current.SetSelectedGameObject(inputField.gameObject, null);
+
 	}
 
 	// Update is called once per frame
 	void Update () {
+
 		if(inputField.text != "" && Input.GetKey(KeyCode.Return)) {
 			switch (inputRound) {
-				case 0:
-					cultName = inputField.text;
-					promptText.text = "What are your followers called?";
-					break;
-				case 1:
-					followerName = inputField.text;
-					promptText.text = "What is your cult's slogan?";
-					break;
-				default:
-					cultSlogan = inputField.text;
-					ss = new switchScene ("CultTycoon2016");
-					ss.switchs();
-					break;
+			case 0:
+				cultName = inputField.text;
+				promptText.text = "What are your followers called?";
+				break;
+			case 1:
+				followerName = inputField.text;
+				promptText.text = "What is your cult's slogan?";
+				break;
+			default:
+				cultSlogan = inputField.text;
+				ss = new switchScene ("CultTycoon2016");
+				ss.switchs();
+				break;
 			}
 			inputField.text = "";
 			EventSystem.current.SetSelectedGameObject (inputField.gameObject, null);
