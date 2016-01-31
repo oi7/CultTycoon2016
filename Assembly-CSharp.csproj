@@ -51,6 +51,7 @@
      <Compile Include="Assets\DisplayAssets.cs" />
      <Compile Include="Assets\DisplayBackground.cs" />
      <Compile Include="Assets\DisplayFollower.cs" />
+     <Compile Include="Assets\EndGame.cs" />
      <Compile Include="Assets\PlayerAssets.cs" />
      <Compile Include="Assets\RallyBehavior.cs" />
      <Compile Include="Assets\RallyButton.cs" />
