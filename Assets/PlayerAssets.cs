@@ -8,6 +8,10 @@ public class PlayerAssets : MonoBehaviour {
 	public int follower;
 	public int week;
 
+	public string cultName;
+	public string followerName;
+	public string cultSlogan;
+
 	public static PlayerAssets Instance = new PlayerAssets();
 
 	public PlayerAssets(int mon, int fol, int wee)
@@ -22,8 +26,10 @@ public class PlayerAssets : MonoBehaviour {
 		money = 0;
 		follower = 0;
 		week = 0;
+		cultName = "Trump 2016";
+		followerName = "Trump supporters";
+		cultSlogan = "Make America great again";
 	}
-
 		
 	void Rally(int increasedFollower, int rallyCost)
 	{
