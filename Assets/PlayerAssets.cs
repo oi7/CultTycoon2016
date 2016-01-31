@@ -5,48 +5,45 @@ using UnityEngine.UI;
 public class PlayerAssets {
 
 	public int money;
-	public int cult;
-	public int item;
+	public int follower;
+	public int week;
 
 	public static PlayerAssets Instance = new PlayerAssets();
 
-	public PlayerAssets(int mon, int cul, int ite)
+	public PlayerAssets(int mon, int fol, int wee)
 	{
 		money = mon;
-		cult = cul;
-		item = ite;
+		follower = fol;
+		week = wee;
 	}	
 
 	public PlayerAssets()
 	{
 		money = 0;
-		cult = 0;
-		item = 0;
+		follower = 0;
+		week = 0;
 	}
 
 		
-	int Rally(int cul)
+	void Rally(int increasedFollower, int rallyCost)
 	{
-		cult += cul;
-		return cult;
+		follower += increasedFollower;
+		money -= rallyCost;
 	}
 
-	int Purchase(int purchaseCost)
+	void Purchase(int purchaseCost)
 	{
 		money -= purchaseCost;
-		return money;
 
 	}
 
-	int Travel(int travelCost)
+	void Travel(int travelCost)
 	{
 		money -= travelCost;
-		return money;
 	}
 
-	int Fundraise(int mon)
+	void Fundraise(int increasedMoney)
 	{
-		money += mon;
-		return money;
+		money += increasedMoney;
 	}
 }

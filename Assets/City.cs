@@ -21,31 +21,31 @@ public class City : MonoBehaviour {
 //		Debug.Log ("hello");
 	}
 
-	string[] names = {
-		"Bangor (Maine)",
-		"Stowe (Vermont)",
-		"Albany (NY)",
-		"Scranton (PA)",
-		"Cambridge (MA)",
-		"Pawtucket (RI)",
-		"Atlantic City (NJ)",
-		"Washington DC",
-		"Huntington (WV)",
-		"Bowling Green (KY)",
-		"Nashville (TN)",
-		"Denver (CO)",
-		"Tuscaloosa (AL)",
-		"Key West (FL)",
-		"Mobile (AL)",
-		"TEXAS (TEXAS)",
-		"Roswell (NM)",
-		"Emerald City (KS)",
-		"Helena (MT)",
-		"Las Vegas (NV)",
-		"Salt Lake City (UT)",
-		"San Francisco (CA)",
-		"Seattle (WA)"
-	};
+//	string[] names = {
+//		"Bangor (Maine)",
+//		"Stowe (Vermont)",
+//		"Albany (NY)",
+//		"Scranton (PA)",
+//		"Cambridge (MA)",
+//		"Pawtucket (RI)",
+//		"Atlantic City (NJ)",
+//		"Washington DC",
+//		"Huntington (WV)",
+//		"Bowling Green (KY)",
+//		"Nashville (TN)",
+//		"Denver (CO)",
+//		"Tuscaloosa (AL)",
+//		"Key West (FL)",
+//		"Mobile (AL)",
+//		"TEXAS (TEXAS)",
+//		"Roswell (NM)",
+//		"Emerald City (KS)",
+//		"Helena (MT)",
+//		"Las Vegas (NV)",
+//		"Salt Lake City (UT)",
+//		"San Francisco (CA)",
+//		"Seattle (WA)"
+//	};
 
 	// Use this for initialization
 	void Start () {
